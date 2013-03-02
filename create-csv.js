@@ -60,8 +60,6 @@ $('tbody tr', $table).each(function(){
 
 var data = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csv);
 
-$('body').append('<a href="'+data+'" download="statement.csv" id="download-statement">Download</a>');
+$('body').append('<a href="'+data+'" download="statement-'+(statement_date.replace(' ', '-'))+'.csv" id="download-statement" style="display: none;">Download</a>');
 
 $('#download-statement')[0].click();
-
-//window.location = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csv);
