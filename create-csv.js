@@ -58,4 +58,10 @@ $('tbody tr', $table).each(function(){
 	
 });
 
-window.location = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csv);
+var data = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csv);
+
+$('body').append('<a href="'+data+'" download="statement.csv" id="download-statement">Download</a>');
+
+$('#download-statement').click();
+
+//window.location = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csv);
