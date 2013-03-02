@@ -62,6 +62,6 @@ var data = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csv);
 
 $('body').append('<a href="'+data+'" download="statement.csv" id="download-statement">Download</a>');
 
-$('#download-statement').click();
+$('#download-statement').trigger('click');
 
 //window.location = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csv);
